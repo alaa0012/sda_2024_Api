@@ -1,6 +1,28 @@
 package pojos;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class BookingPojo {
+    /*
+    {
+                "firstname": "John",
+                "lastname": "Smith",
+                "totalprice": 111,
+                "depositpaid": true,
+                "bookingdates": BookingDatesPojo,
+                "additionalneeds": "Breakfast"
+            }
+     */
+    private String firstname;
+    private String lastname;
+    private Integer totalprice;
+    private Boolean depositpaid;
+    private BookingDatesPojo bookingdates;
+    private String additionalneeds;
+
+    public BookingPojo() {
+    }
 
     public BookingPojo(String firstname, String lastname, Integer totalprice, Boolean depositpaid, BookingDatesPojo bookingdates, String additionalneeds) {
         this.firstname = firstname;

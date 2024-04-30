@@ -30,7 +30,7 @@ public class BookingResponsePojo {
 
     @Override
     public String toString() {
-        return "BookingResponsePojo{" +
+        return "{" +
                 "bookingid=" + bookingid +
                 ", booking=" + booking +
                 '}';
