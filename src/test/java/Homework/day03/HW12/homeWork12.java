@@ -1,9 +1,7 @@
 package Homework.day03.HW12;
 
-import Homework.day03.HW12.BaseUrlHW12;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -21,6 +19,7 @@ public class homeWork12 extends BaseUrlHW12 {
      */
     public static PojoHW12 payLoad;
     public Integer id = 12555553;
+
     @Test
     public void postRequest(){
         //Set Url
@@ -51,11 +50,9 @@ public class homeWork12 extends BaseUrlHW12 {
         assertEquals(payLoad.getPhotoUrls(), actualData.getPhotoUrls());
         assertEquals(payLoad.getTags().toString(),actualData.getTags().toString());
         assertEquals(payLoad.getStatus(),actualData.getStatus());
-
-
     }
 
-    @Test(dependsOnMethods = "postRequest")
+    @Test
     public void getRequest(){
         //Set Url
         spec.pathParams("first","pet"
@@ -78,7 +75,7 @@ public class homeWork12 extends BaseUrlHW12 {
         assertEquals(payLoad.getStatus(),actualData.getStatus());
     }
 
-    @Test(dependsOnMethods = "postRequest")
+    @Test
     public void putRequest(){
         //Set Url
         spec.pathParams("first","pet");
@@ -103,7 +100,7 @@ public class homeWork12 extends BaseUrlHW12 {
 
     }
 
-    @Test(dependsOnMethods = "postRequest",priority = 1)
+    @Test(priority = 1)
     public void deleteRequest(){
         //Set Url
         spec.pathParams("first","pet"
