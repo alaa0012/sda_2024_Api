@@ -7,6 +7,11 @@ public class Category{
 	public Category() {
 	}
 
+	public Category(String name, Integer id) {
+		this.name = name;
+		this.id = id;
+	}
+
 	public void setName(String name){
 		this.name = name;
 	}
@@ -24,11 +29,11 @@ public class Category{
 	}
 
 	@Override
- 	public String toString(){
-		return 
-			"Category{" + 
-			"name = '" + name + '\'' + 
-			",id = '" + id + '\'' + 
-			"}";
-		}
+	public String toString(){
+		return
+				"Category{" +
+						"name = '" + name + '\'' +
+						",id = '" + id + '\'' +
+						"}";
+	}
 }

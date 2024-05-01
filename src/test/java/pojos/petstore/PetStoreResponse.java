@@ -13,6 +13,15 @@ public class PetStoreResponse {
 	public PetStoreResponse() {
 	}
 
+	public PetStoreResponse(List<String> photoUrls, String name, Integer id, Category category, List<TagsItem> tags, String status) {
+		this.photoUrls = photoUrls;
+		this.name = name;
+		this.id = id;
+		this.category = category;
+		this.tags = tags;
+		this.status = status;
+	}
+
 	public void setPhotoUrls(List<String> photoUrls){
 		this.photoUrls = photoUrls;
 	}
@@ -62,15 +71,15 @@ public class PetStoreResponse {
 	}
 
 	@Override
- 	public String toString(){
-		return 
-			"Response{" + 
-			"photoUrls = '" + photoUrls + '\'' + 
-			",name = '" + name + '\'' + 
-			",id = '" + id + '\'' + 
-			",category = '" + category + '\'' + 
-			",tags = '" + tags + '\'' + 
-			",status = '" + status + '\'' + 
-			"}";
-		}
+	public String toString(){
+		return
+				"PetStoreResponse{" +
+						"photoUrls = '" + photoUrls + '\'' +
+						",name = '" + name + '\'' +
+						",id = '" + id + '\'' +
+						",category = '" + category + '\'' +
+						",tags = '" + tags + '\'' +
+						",status = '" + status + '\'' +
+						"}";
+	}
 }
